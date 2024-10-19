@@ -1,0 +1,18 @@
+version: "3"
+services:
+  server:
+    image: 767397833843.dkr.ecr.us-east-1.amazonaws.com/bia:${TAG}
+    ports:
+      - 80:8080
+    environment:
+      DB_USER: postgres
+      DB_PWD: postgres
+      DB_HOST: biadb.c1g4ii6ssn81.us-east-1.rds.amazonaws.com
+      DB_PORT: 5432
+      ## NAO PRECISA NO BOOTCAMP DAQUI PRA BAIXO ##
+      ## DB_SECRET_NAME: rds!db-a456979c-c82d-4ef7-bed0-9e5c2cf0d9b0
+      # DB_REGION: us-east-1
+      # AWS_ACCESS_KEY_ID:
+      # AWS_SECRET_ACCESS_KEY:
+      # DEBUG_SECRET: true
+      # IS_LOCAL: true
